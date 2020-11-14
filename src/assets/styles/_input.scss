@@ -1,0 +1,94 @@
+@import "~src/assets/styles/common";
+
+// From
+.form__field {
+  margin-bottom: 2.4rem;
+
+  .form__field__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .form__field__row__short-item {
+      flex: 0 1 calc(50% - 1.2rem);
+    }
+
+    .form__field__row__very-short-item {
+      flex: 0 1 calc(33% - 1.2rem);
+    }
+  }
+}
+
+
+// Input Text
+.input-text {
+  background-color: white;
+  flex: 1;
+  width: 100%;
+  padding: 1rem 1.8rem;
+  border: none;
+  font-size: 1.8rem;
+  box-shadow: $elevation-0-stroke;
+  border-radius: 80rem;
+
+
+  &::placeholder {
+    color: $text-tertiary;
+  }
+
+  &:focus {
+    box-shadow: $elevation-2-stroke;
+  }
+
+}
+
+// olso text area
+.input-text-area {
+  resize: none;
+}
+
+.input__label {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: .6rem;
+}
+
+.input__error-message {
+  font-size: 1.6rem;
+  color: $red;
+  font-weight: 500;
+}
+
+
+
+
+
+
+// checkbox
+.input__checkbox-wrapper {
+  padding: .6rem 0;
+  display: flex;
+  align-items: center;
+
+  .input__checkbox-content {
+    display: flex;
+    align-items: center;
+
+
+    .input__checkbox-hide {
+      display: none;
+    }
+
+    .input__checkbox__icon {
+      display: flex;
+      align-items: center;
+      margin-right: .6rem;
+    }
+
+    .input__checkbox__label {
+      flex: 1;
+    }
+
+  }
+}
+

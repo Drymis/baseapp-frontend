@@ -1,0 +1,70 @@
+$gray: #C0C0C0;
+$gray_light: #EEEEEE;
+$gray_dark: rgb(87, 87, 87);
+$deep_dark_grey: #4f4f4f;
+
+$white_light_transparent: rgba(255, 255, 255, 0.8);
+
+$orange: #ff632e;
+$yellow: #f7d100;
+
+$green: #25c990;
+$cyan: #4bd3eb;
+
+$red: #d42045;
+$pink: #eb378c;
+
+$indigo_light: #9688b8;
+$indigo_mid: #684caa;
+$indigo: #512ca6;
+$purple: rgb(95, 24, 52);
+$purple_transparent: rgba(95, 24, 52, 0.4);
+
+$dark-blue: rgb(11, 21, 56);
+
+$portfolio-red: rgba(219, 88, 88, 1);
+$portfolio-red--hover: rgba(219, 88, 88, .24);
+$portfolio-main-color: rgba(85, 32, 60, 1);
+$portfolio-main-color--hover: rgba(85, 32, 60, .24);
+$portfolio-purple: rgba(82, 44, 169, 1);
+$portfolio-purple--hover: rgba(82, 44, 169, .24);
+
+
+// Media queries
+$break_phone: 37.5em; //600px
+$break_tab_port: 56.25em; //900px
+$break_tab_land: 75em;
+$break_desk_big: 112.5em;
+
+
+// Palette
+$primary_color_solid: black;
+$primary_color_solid_hover: rgb(36,36,36);
+$primary_color_solid_active: rgb(48,48,48);
+
+
+// Text
+$text-primary: rgba(0,0,0, .98);
+$text-secondary: rgba(0,0,0, .72);
+
+$text-tertiary: rgba(0,0,0, .24);
+
+$text-white-primary: rgba(255,255,255, .98);
+$text-white-secondary: rgba(255,255,255, .72);
+
+
+// States for transparent element
+$transparent_hover: rgba(0, 0, 0, 0.04);
+$transparent_active: rgba(0, 0, 0, 0.08);
+
+$white_hover: rgba(255, 255, 255, 0.08);
+$white_active: rgba(255, 255, 255, 0.16);
+
+// Elevation shadow
+$elevation-0: 0 0 0 1px rgba(0, 0, 0, 0.06);
+$elevation-2: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 0.6rem 2.4rem 0 rgba(0, 0, 0, 0.06), 0 0.4rem 1.2rem 0 rgba(0, 0, 0, 0.06);
+$elevation-3: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 0.9rem 3.6rem 0 rgba(0, 0, 0, 0.09), 0 0.6rem 1.8rem 0 rgba(0, 0, 0, 0.09);
+$elevation-4: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 1.2rem 4.8rem 0 rgba(0, 0, 0, 0.12), 0 0.8rem 2.4rem 0 rgba(0, 0, 0, 0.12);
+
+$elevation-0-stroke: 0 0 0 1px rgba(0, 0, 0, 0.18);
+$elevation-2-stroke: 0 0 0 1px rgba(31, 3, 3, 0.18), 0 0.6rem 2.4rem 0 rgba(0, 0, 0, 0.06), 0 0.4rem 1.2rem 0 rgba(0, 0, 0, 0.06);

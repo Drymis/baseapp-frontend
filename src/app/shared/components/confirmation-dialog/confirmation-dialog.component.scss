@@ -1,0 +1,27 @@
+// Our default
+@import "~src/assets/styles/common";
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .btn {
+        font-size: 1.4rem;
+        padding: 1.2rem 1.8rem;
+        margin: 1.2rem;
+    }
+}
+
+
+.btn--purple {
+    background-color: $purple;
+    color: whitesmoke;
+}
+.capitalized-text {
+    text-transform: capitalize;
+}
+
+.text-center {
+    text-align: center;
+}

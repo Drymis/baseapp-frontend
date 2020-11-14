@@ -1,0 +1,44 @@
+@import "~src/assets/styles/common";
+@import "~src/assets/styles/material_backoffice";
+
+.component-wrapper {
+  width: 100%;
+  max-width: 100%;
+  padding: 1.2rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  
+  .user-name {
+    flex: 1;
+    margin: 1.2rem;
+    font-size: 16px;
+    color: #4f4f4f;
+  }
+
+  .user-logout {
+    width: initial;
+  }
+}
+
+.user-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .icon {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 3rem;
+  }
+
+  .default-icon {
+    width: 100%;
+    height: 100%;
+    font-size: 6rem;
+    color: #4f4f4f;
+  }
+}

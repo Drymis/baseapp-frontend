@@ -1,0 +1,134 @@
+<div class="page-wrapper">
+    <div class="login-icon">
+        <img src="../../../../../../assets/icons/icon-152x152.png" />
+    </div>
+
+    <ng-container *ngIf="pageState === 'login'">
+
+        <h1 class="page__title">
+            create your portfolio
+        </h1>
+
+        <div class="external-login-buttons">
+            <!-- google login button -->
+            <div class="external-login-button">
+                <a href="{{serverAPI}}/users/auth/google?callbackurl={{returnUrl}}">
+                    <app-google-button [text]="'Sign In with Google'"></app-google-button>
+                </a>
+            </div>
+            <!-- facebook login button -->
+            <div class="external-login-button">
+                <a href="{{serverAPI}}/users/auth/facebook?callbackurl={{returnUrl}}">
+                    <app-facebook-button [text]="'Sign In with Facebook'"></app-facebook-button>
+                </a>
+            </div>
+        </div>
+
+        <form class="login-form" [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="title-container">
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Email" type="text" formControlName="mail">
+                    <mat-icon matSuffix>alternate_email</mat-icon>
+                    <!-- <mat-hint>Hint</mat-hint> -->
+                </mat-form-field>
+            </div>
+            <div class="title-container">
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="Password" type="password" formControlName="password">
+                    <mat-icon matSuffix>security</mat-icon>
+                    <!-- <mat-hint>Hint</mat-hint> -->
+                </mat-form-field>
+            </div>
+
+            <!-- TODO implement password recover -->
+            <!-- <a class="recover-password-link" (click)="changePageState('recover')">Recover password</a> -->
+            <p *ngIf="loginErrors" class="input__error-message login__error-message">Wrong email or password</p>
+
+            <div class="login__call-wrapper">
+                <button class="mat-button-with-icon margin-top-normal" mat-raised-button color="primary" type="submit"
+                    value="Log in" [disabled]="loginForm.invalid || isLoading">
+                    <span>Login</span>
+                </button>
+                <a class="recover-password-link" (click)="changePageState('signup')">Create a new account</a>
+            </div>
+        </form>
+    </ng-container>
+
+    <ng-container *ngIf="pageState === 'signup'">
+
+        <h1 class="page__title">
+            sign up
+        </h1>
+
+        <form class="signup-form" [formGroup]="signupForm" (ngSubmit)="signup()">
+            <div class="title-container">
+                <mat-form-field appearance="outline">
+                    <mat-label>Username</mat-label>
+                    <input matInput placeholder="Username" type="text" formControlName="username">
+                    <mat-icon matSuffix>person</mat-icon>
+                    <!-- <mat-hint>Hint</mat-hint> -->
+                </mat-form-field>
+            </div>
+            <div class="title-container">
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Email" type="text" formControlName="mail">
+                    <mat-icon matSuffix>alternate_email</mat-icon>
+                    <!-- <mat-hint>Hint</mat-hint> -->
+                </mat-form-field>
+            </div>
+            <div class="title-container">
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="Password" type="password" formControlName="password">
+                    <mat-icon matSuffix>security</mat-icon>
+                    <!-- <mat-hint>Hint</mat-hint> -->
+                </mat-form-field>
+            </div>
+            <div class="title-container">
+                <mat-form-field appearance="outline">
+                    <mat-label>Confirm password</mat-label>
+                    <input matInput placeholder="Confirm password" type="password" formControlName="confirmPassword">
+                    <mat-icon matSuffix>security</mat-icon>
+                    <!-- <mat-hint>Hint</mat-hint> -->
+                </mat-form-field>
+            </div>
+
+            <p *ngIf="signupErrors" class="input__error-message signup__error-message">{{signupErrors}}</p>
+
+            <div class="signup__call-wrapper">
+                <button class="mat-button-with-icon margin-top-normal" mat-raised-button color="primary" type="submit"
+                    value="Sign up" [disabled]="signupForm.invalid || isLoading">
+                    <span>Register</span>
+                </button>
+                <a class="recover-password-link" (click)="changePageState('login')">Back to Login</a>
+            </div>
+        </form>
+    </ng-container>
+
+    <ng-container *ngIf="pageState === 'recover'">
+        <h1 class="page__title">Recover password</h1>
+
+        <form class="login-form" [formGroup]="recoverForm" (ngSubmit)="recoverPassword()">
+            <div class="title-container">
+                <mat-form-field appearance="outline">
+                    <mat-label>Please enter the email used to Login</mat-label>
+                    <input matInput placeholder="Email" type="text" formControlName="mail">
+                    <mat-icon matSuffix>alternate_email</mat-icon>
+                    <!-- <mat-hint>Hint</mat-hint> -->
+                </mat-form-field>
+            </div>
+
+            <div class="recover__call-wrapper">
+                <button class="mat-button-with-icon margin-top-normal" mat-raised-button color="primary" type="submit"
+                    value="Recover" [disabled]="recoverForm.invalid || isLoading">
+                    <span>Recover</span>
+                </button>
+                <a class="recover-password-link" (click)="changePageState('login')">Back to Login</a>
+            </div>
+        </form>
+    </ng-container>
+
+</div>

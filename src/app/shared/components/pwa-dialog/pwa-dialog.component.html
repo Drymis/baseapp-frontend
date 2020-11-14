@@ -1,0 +1,13 @@
+<div mat-dialog-title class="dialog-title">
+  <div class="icon">
+    <app-icon [iconPath]="icon.rounded.update"></app-icon>
+  </div>
+  <div class="text">{{data.title}}</div>
+</div>
+<div mat-dialog-content>
+  <p class="text-center">{{data.text}}</p>
+</div>
+<div class="buttons" mat-dialog-actions>
+  <button mat-button (click)="onNoClick()" class="btn" *ngIf="data.type === 'installation'">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" class="btn btn--purple" cdkFocusInitial>Ok</button>
+</div>

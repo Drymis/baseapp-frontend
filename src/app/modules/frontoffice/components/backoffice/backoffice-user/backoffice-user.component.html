@@ -1,0 +1,60 @@
+<div class="component-wrapper" *ngIf="currentUser">
+    <div class="user-icon">
+        <img src="{{currentUser.photo}}" class="icon" *ngIf="currentUser.photo" />
+        <mat-icon matSuffix class="default-icon" *ngIf="!currentUser.photo">person_pin</mat-icon>
+    </div>
+    <div class="user-name" [ngStyle]="{'text-transform': currentUser.username ? 'capitalize' : ''}">
+        {{currentUser.username ? currentUser.username : currentUser.email}}
+    </div>
+    <button mat-raised-button color="primary" class="mat-button-with-icon user-logout" (click)="logout()">
+        <span>Logout</span>
+        <mat-icon matSuffix>exit_to_app</mat-icon>
+    </button>
+</div>
+
+
+<!-- {{currentUser}} -->
+<!-- 
+    
+    code: "bd990d53-3cfe-47d4-baaf-15fee90f7407"
+    createdAt: "2020-11-14T11:18:03.871Z"
+    email: "test@gmail.com"
+    emails: []
+    provider: null
+    photos: []
+    role: "admin"
+    username: "test"
+
+ -->
+Users
+<div class="users-list-container">
+
+    <!-- LIST USERS -->
+    <ng-container *ngFor="let user of users">
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <!-- {{user.photo}} -->
+                    <div class="user-icon">
+                        <img src="{{user.photos[0].value}}" class="icon" *ngIf="user.photos?.length" />
+                        <mat-icon matSuffix class="default-icon" *ngIf="!user.photos?.length">person_pin</mat-icon>
+                    </div>
+                </mat-panel-title>
+                <mat-panel-description>
+                    {{user.email}}
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <div>
+                <!-- GET USER -->
+                ssssssssssssssssssssssssss
+
+                <!-- CREATE USER -->
+
+                <!-- UPDATE USER -->
+
+                <!-- DELETE USER -->
+            </div>
+        </mat-expansion-panel>
+    </ng-container>
+</div>

@@ -1,0 +1,51 @@
+.page-wrapper {
+    max-width: 42em;
+    margin: 0 auto;
+    padding: 4.8rem 2.4rem;
+    padding-bottom: 14.4rem;
+
+
+
+    .page__title  {
+        font-size: 2rem;
+        margin: 4.8rem 0 4.8rem 0;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: .3rem;
+
+    }
+
+    .page__title-secondary {
+        margin: 4.8rem 0 2.4rem 0;
+        font-size: 2.8rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: .42rem; // Based on page title 2 x 0.3 = 2.8 = x
+
+        &.page__title-secondary--white {
+            color: $text-white-primary;
+        }
+
+    }
+
+    .page__description-container {
+
+        // Riprende la larghezza della barra all'interno delle card
+        width: 80%;
+        padding-right: 4.8rem;
+        margin-bottom: 4.8rem;
+
+        .page__description__paragraph {
+            color: $text-secondary;
+            padding-bottom: 2.4rem;
+        }
+    }
+
+    .page__call-to-action-wrapper {
+        margin: 2.4rem 0;
+        display: flex;
+        justify-content: center;
+
+    }
+}

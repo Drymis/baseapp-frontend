@@ -1,0 +1,18 @@
+<div class="component-wrapper card" (click)="fileInput.click()">
+  <img *ngIf="uploadedFileUrl && mediaType === 'image'" src="{{serverFileUrl + uploadedFileUrl}}"/>
+  <video *ngIf="uploadedFileUrl && mediaType === 'video'" class="video-preview" autoplay playsinline loop [muted]="'muted'">
+    <source src="{{serverFileUrl + uploadedFileUrl}}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <mat-icon *ngIf="!uploadedFileUrl" class="broken-image-icon" color="primary">
+    {{mediaType === 'image' || !mediaType ? 'image_search' : ''}}
+    {{mediaType === 'video' ? 'ondemand_video' : ''}}
+  </mat-icon>
+
+  <button mat-raised-button color="primary" class="cta-button">
+      <span>{{text ? text : 'UPLOAD' + mediaType}}</span>
+      <mat-icon matSuffix *ngIf="mediaType === 'image'">image_search</mat-icon>
+      <mat-icon matSuffix *ngIf="mediaType === 'video'">ondemand_video</mat-icon>
+      <input #fileInput type="file" (change)="updateFileUrl($event)" accept="{{mediaType}}/*" style="display:none;" />
+  </button>
+</div>
